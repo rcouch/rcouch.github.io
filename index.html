@@ -1,441 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rcouch - Apache COUCHDB distribution</title>
-    <link rel="icon" href="favicon.ico">
-
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <!--    <link rel="stylesheet" href="bootstrap-theme.min.css"> -->
-
-    <link rel="stylesheet" href="main.css">
-
-
-
-<!--<link rel="stylesheet" href="theme.css">-->
-
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="rcouch-title.png"></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li> <a href="#why">Why RCOUCH?</a></li>
-            <li> <a href="#whatsnew">What's new?</a></li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                role="button" aria-expanded="false">Learn<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a
-                    href="http://docs.rcouch.org/en/latest/install.html">Install
-                  RCOUCH</a></li>
-                <li><a href="http://docs.rcouch.org">Documentation</a></li>
-                <li><a href="http://github.com/rcouch/rcouch/wiki">WIKI</a></li>
-                <li><a href="http://blog.rcouch.org">Blog</a></li>
-                <li><a href="https://plus.google.com/100549290961474788559"
-                       rel="publisher">Google+</a></li>
-              </ul>            
-            </li>
-            <li><a href="#download">Download</a></li>
-            <li><a href="#community">Community</a></li>
-            <li><a href="#support">Paid Support</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-
-        <!-- First Featurette -->
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-
-            <h1>RCOUCH <small>An Apache CouchDB Distribution</small></h1>
-            <p class="lead">Rcouch is a complete <strong>opensource</strong> distribution of Apache CouchDB
-          packaging projects from the CouchDB Ecosystem and extend it with
-          innovative features. It targets the mobile and decentralized WEB.</p>
-
-            <p></p>
-            <p></p>
-            <a class="btn btn-primary btn-lg" href="#why">Why RCOUCH?</a> <a
-              class="btn btn-primary btn-lg btn-success"
-              href="#whatsnew">What's new in 1.1?</a>
-
-            </div>
-
-            <div class="hidden-xs col-md-6col-sm-6">
-            <img class="img-circle img-responsive"
-                 src="rcouch-logo.png">
-            </div>
-
-        </div>
-    
-        <hr class="featurette-divider">
-
-        <div class="row" id="why">
-          <div class="hidden-xs col-md-5 col-sm-5">
-            <img class="img-circle img-responsive pull-lefy" src="rcouch-futon.png">
-          </div>
-
-
-          <div class="col-md-7 col-sm-7">
-            <h2>Why RCOUCH?</h2>
-            <p class="lead">The RCOUCH Distribution including Apache CouchDB
-            provides you with an enterprise-grade distributed CouchDB platform to
-            reliably store documents and replicate them to your mobiles. With its unbiased approach to
-            open source, RCOUCH gives you a broad range of technologies
-            projects to replicate to your Mobiles and machines on the cloud, so
-            you can use the right tool for your needs. Key RCOUCH features are
-            described below.</p>
-
-            <div class="panel-group" id="accordion" role="tablist">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="viewchange"> 
-                  <h4 class="panel-title"> 
-                    <a data-toggle="collapse"
-                       data-parent="#accordion" href="#collapseOne"
-                                                aria-expanded="false" aria-controls="collapseOne"> View
-                                                Changes & view based replication </a> 
-                  </h4> 
-                </div> 
-                <div  id="collapseOne"
-                      class="panel-collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="headingOne"> 
-                  <div class="panel-body"> 
-                    <p>RCOUCH offers
-                    you the possibility to get
-                    incremental view changes (ie using
-                    the changes API over a view index).
-                    View changes can be filtered using a
-                    javascript function or using the view
-                    parameters (you can get view changes
-                    for a key or a range).  It also
-                    allows you to incrementally replicate
-                    your documents using a view.</p>
-
-                    <p>For example, instead of using one database / user to filter
-                    your database for a user, you can can just use a view that
-                    will filter your documents / user. Or more.</p>
-                  </div> 
-                </div> 
-              </div> 
-
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                  <h4 class="panel-title"> 
-                    <a class="collapsed"
-                       data-toggle="collapse"
-                       data-parent="#accordion"
-                       href="#collapseTwo"
-                       aria-expanded="false"
-                       aria-controls="collapseTwo">
-                      Optimised for Mobile usage.  </a> 
-                  </h4> 
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse"
-                                      role="tabpanel" aria-labelledby="headingTwo"> 
-                  <div class="panel-body"> 
-                    <p>RCOUCH added the <code>bulk_get</code>
-                    handler that can be used with couchbaselite to
-                    improve your replication.  (can increase by 60%
-                    the speed of your replication over
-                    internet).</p>
-
-                    <p>The view based replication is also the perfect way to
-                    filter replication to your mobiles devices.</p>
-
-                  </div>
-                </div>
-              </div> 
-
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <h4 class="panel-title"> <a class="collapsed"
-                                              data-toggle="collapse" 
-                                              data-parent="#accordion"
-                                              href="#collapseThree"
-                                              aria-expanded="false" 
-                                              aria-controls="collapseThree"> 
-                      Geospatial queries </a>
-                  </h4>
-                </div> 
-
-                <div id="collapseThree"
-                     class="panel-collapse collapse" role="tabpanel"
-                                                     aria-labelledby="headingThree">
-                  <div class="panel-body"> 
-                    <p>With RCOUCH comes
-                    geocouch that can be used to do geospatial
-                    queries</p>      
-                  </div> 
-                </div>
-              </div>
-
-
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingFour">
-                  <h4 class="panel-title"> <a class="collapsed"
-                                              data-toggle="collapse" 
-                                              data-parent="#accordion"
-                                              href="#collapseFour"
-                                              aria-expanded="false" 
-                                              aria-controls="collapseFour">Easily customizable for your usage</a>
-                  </h4>
-                </div> 
-
-                <div id="collapseFour"
-                     class="panel-collapse collapse" role="tabpanel"
-                                                     aria-labelledby="headingFour">
-                  <div class="panel-body"> 
-                    <p>RCOUCH has been specially created to be easily
-                    customisable and is provided as a full Erlang OTP
-                    application. Want a special feature? <a
-                       href="#support">Contact us</a></p>      
-                  </div> 
-                </div>
-              </div>
-
-            </div>
-
-
-          </div>
-
-
-
-
-      </div>
-
-        
-        <hr class="featurette-divider">
-
-        <!-- Third Featurette -->
-        <div class="row">
-
-
-          <div class="col-xs-12 col-md-8 col-sm-8"  id="whatsnew">
-            <h2>What's new?</h2>
-            <p class="lead">
-            The latest release of RCOUCH includes Apache CouchDB 1.6 1 with
-            support of the view changes, compatible <code>bulk_get</code>
-            feature with couchbase lite and geospatial querie.
-            </p>
-            <table class="table table-bordered">
-              <tr>
-                <td></td>
-                <td></td>
-                <th>RCOUCH 1.0.3</th>
-                <th>RCOUCH 1.1.0</td>
-              </tr>
-              <tr>
-                <th class="info"colspan=4>Core CouchDB</th>
-              </tr>
-              <tr>
-                <td>Couch core</td>
-                <td>Apache CouchDB core with bulk_get and many patches</td>
-                <td>1.6.3 (1.6.1 based)</td>
-                <td>1.6.4 (1.6.1 based)</td>
-              </tr>
-              <tr>
-                <td>View indexes</td>
-                <td>M/R views with view changes</td>
-                <td>1.3.0</td>
-                <td>1.3.0</td>
-              </tr>
-              <tr>
-                <td>HTTPd</td>
-                <td>HTTP Interface based on Apache CouchDB 1.6.1</td>
-                <td>1.0.0</td>
-                <td>1.1.0</td>
-              </tr>
-              <tr>
-                <td>Replicator</td>
-                <td>Document replication with support of replication based on
-                a view</td>
-                <td>1.6.1</td>
-                <td>1.6.1</td>
-              </tr>
-
-              <tr>
-                <th class="info" colspan=4>Extensions</th>
-              </tr>
-              <tr>
-                <td>Geocouch</td>
-                <td>Geospatial queries</td>
-                <td>1.0.0</td>
-                <td>1.0.0</td>
-              </tr>
-              <tr>
-                <td>Random docs</td>
-                <td>Fetch random docs</td>
-                <td>1.0.0</td>
-                <td>1.0.0</td>
-              </tr>
-            </table>
-          </div>
-          
-                    <div class="hidden-xs col-md-4 col-sm-4">
-            <img class="img-circle img-responsive pull-left" src="whatsnew.png">
-          </div>
-
-
-
-        </div>
-
-        <hr class="featurette-divider">
-
-
-        <div class="row" id="download">
-                              <div class="hidden-xs col-md-4 col-sm-4">
-            <img class="img-circle img-responsive pull-left" src="download.png">
-          </div>
-          <div class="col-md-8 col-sm-8">
-            <h2>Download</h2>
-            <p class="lead"><strong>RCOUCH</strong> is downloadable as a source
-            archive.</p>
-
-            <table class="table">
-
-              <tr class="active">
-                <th>Latest source version</th>
-                <td><a
-                   href="https://github.com/rcouch/rcouch/archive/master.zip">master.zip</a></td>
-              </tr>
-
-              <tr>
-                <th colspan=2>Latest releases</th>
-              </tr>
-              <tr class="success">
-                <th>1.1</th>
-                <td>
-                  <p><strong>ZIP file: </strong><a
-                href="https://github.com/rcouch/rcouch/archive/rcouch-1.1.0.zip">rcouch-1.1.0.zip</a></p>
-                  <p><strong>TAR.GZ file: </strong><a
-                      href="https://github.com/rcouch/rcouch/archive/rcouch-1.1.0.tar.gz">rcouch-1.1.0.tar.gz</a></p>
-                </td>
-              </tr>
-              <tr class="success">
-                <th>1.0</th>
-                <td>
-                  <p><strong>ZIP file: </strong><a
-                href="https://github.com/rcouch/rcouch/archive/rcouch-1.0.3.zip">rcouch-1.0.3.zip</a></p>
-                  <p><strong>TAR.GZ file: </strong><a
-                      href="https://github.com/rcouch/rcouch/archive/rcouch-1.0.3.tar.gz">rcouch-1.0.3.tar.gz</a></p>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-
-
-    <hr class="featurette-divider">
-
-
-        <div class="row" id="community">
-          <div class="col-md-8 col-sm-8">
-            <h2>Community</h2>
-
-            <p class="lead">RCOUCH uses the <a
-               href="http://rfc.zeromq.org/spec:22">C4.1</a> (Collective Code
-             Construction Contract) process for contributions.</p>
-
-            <blockquote>
-            <p>Under C4.1 process, you are more than welcome to help us by:
-            <ul>
-
-              <li>join the discussion on <strong><a
-               href="http://webchat.freenode.net/?channels=refuge.io">IRC</a></strong>
-                or our <strong><a
-               href="https://groups.google.com/forum/#!forum/rcouch">Google
-               group</a></strong> over anything from design to code style try out</li>
-              <li>and <strong><a
-               href="https://github.com/rcouch/rcouch/issues/new">submit
-               issue</a> reports</strong></li>
-              <li>or feature requests pick a task in</li>
-              <li><strong><a
-               href="https://github.com/rcouch/rcouch/issues">issues</a></strong>
-                and get it done</li>
-              <li>fork the projects repositories and have your own fixes send us pull
-                requests and even</li>
-              <li>star this project ^_^</li>
-            </ul>
-
-            </p>
-            </blockquote>
-
-            <p class="lead">Source code of the RCOUCH project can be found in
-            the <strong><a href="http://github.com/rcouch">RCOUCH
-              Github organization</a></strong>.</p>
-
-          </div>
-
-          <div class="hidden-xs col-md-4 col-sm-4">
-            <a href="http://github.com/rcouch/rcouch"><img class="img-responsive" src="octocat.png"></a>
-          </div>
-        </div>
-
-
-        <hr class="featurette-divider">
-
-
-        <div class="row" id="support"> 
-          <div class="hidden-xs col-md-4 col-sm-4">
-            <img class="img-circle img-responsive pull-left" src="support.png">
-          </div>
-          <div class="col-md-8 col-sm-8">
-            <h2>Paid support</h2>
-            <h3>From Enki Multimedia</h3>
-            <p>Enki Multimedia maintains Python and Erlang bindings, Extensions and
-            release distributions. Areas of expertise: large-scale
-            architecture, training, deployment, support. Contact <a
-               href="mailto:benoitc@benoitcnetwork.eu">Benoit
-               Chesneau</a>.</p>
-
-
-            <h3>Under Apache License 2</h3>
-            <p>You may obtain a copy of the License at <a
-               href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><p>
-          </div>
-        </div>
-
-        
-
-
-
-
-
-
-    </div><!-- /.container -->
-
-    
-
-    <div class="container">
-      <hr class="featurette-divider">
-      <p>Web site design and content is copyright (c) 2014 Enki Multimedia.
-      Contact us for professional support. Site content licensed under <a
-               href="http://creativecommons.org/licenses/by-sa/3.0/">cc-by-sa
-               3.0</a>. RCOUCH is free software licensed under the Apache
-             Licensee 2.RCOUCH are trademarks of Benoit Chesneau.</p>
-    </div>
-
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  </body>
+<html>
+
+    <head>
+
+        <title>Tiny Speck</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="refresh" content="5; URL=https://barrel-db.org" />
+
+        <style>
+            body {
+                background: #45415b;
+                margin: 3rem 2.5rem;
+                text-align: center;
+                color: #fff;
+                font-size: 0.75rem;
+                line-height: 1.4rem;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            a {
+                color: #91819D;
+            }
+            a:hover {
+                color: white;
+            }
+            div {
+                margin: 0 auto 1rem;
+                width: 100%;
+                opacity: 0;
+            }
+            p {
+                opacity: 0;
+
+                -webkit-animation: fadein 1s;
+                -moz-animation: fadein 1s;
+                -ms-animation: fadein 1s;
+                -o-animation: fadein 1s;
+                animation: fadein 1s;
+
+                -webkit-animation-delay: 3.5s;
+                -moz-animation-delay: 3.5s;
+                -ms-animation-delay: 3.5s;
+                -o-animation-delay: 3.5s;
+                animation-delay: 3.5s;
+
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+            img {
+                width: 100%;
+            }
+            #rcouch_logo {
+                max-width: 872px;
+                max-height: 212px;
+
+                -webkit-animation: fadein 1.5s, slideup 1.5s;
+                -moz-animation: fadein 1.5s, slideup 1.5s;
+                -ms-animation: fadein 1.5s, slideup 1.5s;
+                -o-animation: fadein 1.5s, slideup 1.5s;
+                animation: fadein 1.5s, slideup 1.5s;
+
+                -webkit-animation-delay: 0.25s;
+                -moz-animation-delay: 0.25s;
+                -ms-animation-delay: 0.25s;
+                -o-animation-delay: 0.25s;
+                animation-delay: 0.25s;
+
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+
+            }
+            #is_now {
+                margin: 0 auto 2.5rem;
+                width: 165px;
+                height: 65px;
+
+                -webkit-animation: fadein 1.5s;
+                -moz-animation: fadein 1.5s;
+                -ms-animation: fadein 1.5s;
+                -o-animation: fadein 1.5s;
+                animation: fadein 1.5s;
+
+                -webkit-animation-delay: 1s;
+                -moz-animation-delay: 1s;
+                -ms-animation-delay: 1s;
+                -o-animation-delay: 1s;
+                animation-delay: 1s;
+
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+
+            }
+            #barrel_logo {
+                width: 80%; /* keep Barrel logo in proportion to Rcouch logo */
+                margin: 0 auto 3rem;
+                max-width: 520px;
+                max-height: 154px;
+
+                -webkit-animation: fadein 1.5s, slidedown 1.5s;
+                -moz-animation: fadein 1.5s, slidedown 1.5s;
+                -ms-animation: fadein 1.5s, slidedown 1.5s;
+                -o-animation: fadein 1.5s, slidedown 1.5s;
+                animation: fadein 1.5s, slidedown 1.5s;
+
+                -webkit-animation-delay: 1.75s;
+                -moz-animation-delay: 1.75s;
+                -ms-animation-delay: 1.75s;
+                -o-animation-delay: 1.75s;
+                animation-delay: 1.75s;
+
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+
+            @media only screen and (max-width: 640px) {
+
+                body {
+                    margin: 3rem 1.5rem;
+                }
+                div {
+                    margin: 0 auto 0.5rem;
+                }
+                #is_now {
+                    margin-bottom: 2rem;
+                    width: 110px;
+                    height: 44px;
+                }
+            }
+
+            @keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            @-moz-keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            @-webkit-keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            @-ms-keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            @-o-keyframes fadein {
+                from { opacity: 0; }
+                to   { opacity: 1; }
+            }
+
+            @keyframes slideup {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            }
+
+            @-moz-keyframes slideup {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            }
+
+            @-webkit-keyframes slideup {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            }
+
+            @-ms-keyframes slideup {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            }
+
+            @-o-keyframes slideup {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            }
+
+            @keyframes slidedown {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(10px);
+                    -moz-transform: translateY(10px);
+                    transform: translateY(10px);
+                }
+            }
+
+            @-moz-keyframes slidedown {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(10px);
+                    -moz-transform: translateY(10px);
+                    transform: translateY(10px);
+                }
+            }
+
+            @-webkit-keyframes slidedown {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(10px);
+                    -moz-transform: translateY(10px);
+                    transform: translateY(10px);
+                }
+            }
+
+            @-ms-keyframes slidedown {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(10px);
+                    -moz-transform: translateY(10px);
+                    transform: translateY(10px);
+                }
+            }
+
+            @-o-keyframes slidedown {
+                from {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                to   {
+                    -webkit-transform: translateY(10px);
+                    -moz-transform: translateY(10px);
+                    transform: translateY(10px);
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="rcouch_logo"><img src="/rcouch_logo@2x.png" srcset="/rcouch_logo.png 1x, /rcouch_logo@2x.png 2x"/></div>
+        <div id="is_now"><img src="/is_now@2x.png" srcset="/is_now.png 1x, /is_now@2x.png 2x" /></div>
+        <div id="barrel_logo"><a href="https://barrel-db.org"><img src="/barrel_logo@2x.png" srcset="/barrel_logo.png 1x, /barrel_logo@2x.png 2x" /></a></div>
+        <p>(If you're not redirected in 5 seconds, <a href="https://barrel-db.org">click here</a>)</p>
+    </body>
+
 </html>
